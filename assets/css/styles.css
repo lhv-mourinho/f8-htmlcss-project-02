@@ -3,8 +3,9 @@
 }
 
 :root {
-    --primary-color: #0f1b4c;
-    --primary-bg-color: #e6f0ff;
+    --primary-color: #171100;
+    --secondary-color: #5f5b53;
+    --primary-bg-color: #fffcf4;
 }
 
 html,
@@ -18,7 +19,8 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: Sen;
+    font-family: Poppins, sans-serif;
+    height: 2000px;
 }
 
 /* Common */
@@ -26,6 +28,104 @@ a {
     text-decoration: none;
 }
 
-body {
-    font-size: 50px;
+.row-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    height: 50px;
+    min-width: 118px;
+    background: #171100;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Header */
+
+#header {
+    padding-top: 30px;
+    position: sticky;
+    top: -30px;
+    background-color: var(--primary-bg-color);
+}
+
+#header .wrapper {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header .content {
+    align-items: center;
+    padding: 15px 0;
+}
+
+#header .logo .text {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+
+#header .logo .text::after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ffb900;
+}
+
+#header .navbar {
+    gap: 70px;
+    align-items: center;
+}
+
+#header .navbar .navigation li {
+    position: relative;
+    /* background-color: #ffb900; */
+    /* height: 20px;
+    width: 80px; */
+}
+
+#header .navbar .navigation a {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+}
+
+#header .navbar .navigation .active a,
+#header .navbar .navigation a:hover {
+    text-shadow: 1px 0 0 currentColor;
+    color: var(--primary-color);
+}
+
+#header .navbar .navigation .active a::after,
+#header .navbar .navigation a:hover::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 3px;
+    position: absolute;
+    border-radius: 999px;
+    background-color: var(--primary-color);
+    bottom: -6px;
+}
+
+#header .navbar .btn {
+    min-width: 144px;
+}
+
+#header .navigation {
+    gap: 42px;
 }
