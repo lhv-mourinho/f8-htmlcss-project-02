@@ -5,6 +5,9 @@
 :root {
     --primary-color: #171100;
     --secondary-color: #5f5b53;
+
+    --hightlight-color: #ffb900;
+
     --primary-bg-color: #fffcf4;
 }
 
@@ -28,6 +31,13 @@ a {
     text-decoration: none;
 }
 
+.wrapper {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .row-space-between {
     display: flex;
     justify-content: space-between;
@@ -36,11 +46,11 @@ a {
 .btn {
     height: 50px;
     min-width: 118px;
-    background: #171100;
+    background: var(--primary-color);
     border-radius: 999px;
     font-weight: 600;
     font-size: 1.6rem;
-    color: #ffffff;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +60,38 @@ a {
     opacity: 0.9;
 }
 
+.btn-light {
+    background-color: var(--hightlight-color);
+}
+
+.btn-cirle {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.btn-cirle .icon {
+    width: 40px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-cirle .text {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.btn-cirle-large .icon {
+    width: 48px;
+    height: 48px;
+}
+
 /* Header */
 
 #header {
@@ -57,13 +99,6 @@ a {
     position: sticky;
     top: -30px;
     background-color: var(--primary-bg-color);
-}
-
-#header .wrapper {
-    width: 1170px;
-    max-width: calc(100% - 48px);
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #header .content {
@@ -83,7 +118,7 @@ a {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: #ffb900;
+    background-color: var(--hightlight-color);
 }
 
 #header .navbar {
@@ -93,9 +128,6 @@ a {
 
 #header .navbar .navigation li {
     position: relative;
-    /* background-color: #ffb900; */
-    /* height: 20px;
-    width: 80px; */
 }
 
 #header .navbar .navigation a {
@@ -128,4 +160,144 @@ a {
 
 #header .navigation {
     gap: 42px;
+}
+
+/* Hero */
+#hero {
+    padding: 65px 0;
+    background-color: var(--primary-bg-color);
+}
+
+#hero .col {
+    flex: 1;
+}
+
+#hero .left {
+    position: relative;
+}
+
+#hero .left .bg {
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#hero .list {
+    width: 270px;
+    height: 244px;
+    background: white;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    position: absolute;
+    bottom: 48px;
+    right: 15px;
+    padding: 28px 24px;
+}
+
+#hero .list .item {
+    margin-bottom: 22px;
+    display: flex;
+    gap: 16px;
+}
+
+#hero .list .item:last-child {
+    margin-bottom: 0;
+}
+
+#hero .list .item .ui-ux .icon {
+    background-color: #fff9e8;
+}
+
+#hero .list .item .development .icon {
+    background-color: #fcefff;
+}
+
+#hero .list .item .marketing .icon {
+    background-color: #ebeaff;
+}
+
+#hero .list .item .sub-title {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+}
+
+#hero .list .item .title {
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+#hero .right {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#hero .right .info {
+    width: calc(100% - 115px);
+}
+
+#hero .right .info .title {
+    font-family: "Sen";
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: var(--primary-color);
+}
+
+#hero .right .info .desc {
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: var(--secondary-color);
+}
+
+#hero .action {
+    margin-top: 38px;
+    display: flex;
+    gap: 28px;
+}
+
+#hero .action .btn.btn-light {
+    min-width: 180px;
+}
+
+#hero .stats .stats-text {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+#hero .stats {
+    margin-top: 48px;
+}
+
+#hero .stats .stats-list {
+    margin-top: 12px;
+    display: flex;
+    gap: 30px;
+}
+
+#hero .stats .stats-list .stat {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+#hero .stats .stats-list .stat .number {
+    font-weight: 700;
+    font-size: 5.4rem;
+    color: var(--primary-color);
+}
+
+#hero .stats .stats-list .stat .unit {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
 }
