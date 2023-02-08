@@ -5,9 +5,7 @@
 :root {
     --primary-color: #171100;
     --secondary-color: #5f5b53;
-
     --hightlight-color: #ffb900;
-
     --primary-bg-color: #fffcf4;
 }
 
@@ -172,8 +170,16 @@ a {
     background-color: var(--primary-bg-color);
 }
 
-#hero .col {
-    flex: 1;
+.row-a > .space {
+    flex: 13;
+}
+
+.row-a > .left {
+    flex: 57;
+}
+
+.row-a > .right {
+    flex: 47;
 }
 
 #hero .left {
@@ -181,21 +187,20 @@ a {
 }
 
 #hero .left .bg {
-    width: 470px;
-    height: 685px;
+    width: 82.5%;
+    min-height: 685px;
     object-fit: cover;
     border-radius: 20px;
 }
 
 #hero .list {
-    width: 270px;
-    height: 244px;
+    min-width: 270px;
     background: white;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     position: absolute;
     bottom: 48px;
-    right: 15px;
+    right: 0;
     padding: 28px 24px;
 }
 
@@ -236,12 +241,8 @@ a {
 
 #hero .right {
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     align-items: center;
-}
-
-#hero .right .info {
-    width: calc(100% - 115px);
 }
 
 #hero .right .info .title {
@@ -259,6 +260,7 @@ a {
     font-size: 1.8rem;
     line-height: 1.67;
     color: var(--secondary-color);
+    text-align: justify;
 }
 
 #hero .action {
