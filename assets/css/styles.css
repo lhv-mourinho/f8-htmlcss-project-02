@@ -309,7 +309,7 @@ a {
 
 /* Courses */
 #courses {
-    padding: 200px;
+    padding: 200px 0;
 }
 
 #courses .intro .text {
